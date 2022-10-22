@@ -11,3 +11,5 @@ require "user.treesitter"           -- syntax highlighting
 require "user.colorizer"            -- blazingly fast colorizer for vim
 require "user.autopairs"            -- auto-closing brackets
 require "user.neoscroll"            -- smooth scrolling
+require "user.nvim-tree"            -- show directories
+require "user.lualine"              -- display status 
