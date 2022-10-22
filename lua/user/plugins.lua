@@ -48,9 +48,7 @@ return packer.startup(function(use)
     use { "nvim-lualine/lualine.nvim" }
 
     -- Colorschemes
-    use { 
-       "bluz71/vim-moonfly-colors",
-    }
+    use { "bluz71/vim-moonfly-colors" }
 
     -- Cmp 
     use { "hrsh7th/nvim-cmp" } -- The completion plugin
@@ -78,6 +76,12 @@ return packer.startup(function(use)
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
     }
+    
+    -- Colorizer
+    use { "norcalli/nvim-colorizer.lua" }
+
+    -- Enable smooth scrolling 
+    use { "karb94/neoscroll.nvim" }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
