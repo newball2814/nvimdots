@@ -17,10 +17,10 @@ end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd([[
-augroup packer_user_config
-autocmd!
-autocmd BufWritePost plugins.lua source <afile> | PackerSync
-augroup end
+    augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    augroup end
 ]])
 
 -- Use a protected call so we don't error out on first use
@@ -38,11 +38,11 @@ packer.init({
     },
 })
 
--- Install your plugins here
+-- Plugins 
 return packer.startup(function(use)
-    use { "wbthomason/packer.nvim" } -- Have packer manage itself
-    use { "nvim-lua/plenary.nvim" }  -- Useful lua functions used by lots of plugins
-    use { "windwp/nvim-autopairs" }  -- Autopairs, integrates with both cmp and treesitter
+    use { "wbthomason/packer.nvim" }        -- Have packer manage itself
+    use { "nvim-lua/plenary.nvim" }         -- Useful lua functions used by lots of plugins
+    use { "windwp/nvim-autopairs" }         -- Autopairs, integrates with both cmp and treesitter
     use { "kyazdani42/nvim-web-devicons" }
     use { "kyazdani42/nvim-tree.lua" }
     use { "nvim-lualine/lualine.nvim" }
@@ -51,22 +51,22 @@ return packer.startup(function(use)
     use { "bluz71/vim-moonfly-colors" }
 
     -- Cmp 
-    use { "hrsh7th/nvim-cmp" } -- The completion plugin
-    use { "hrsh7th/cmp-buffer" } -- buffer completions
-    use { "hrsh7th/cmp-path" } -- path completions
-    use { "saadparwaiz1/cmp_luasnip" } -- snippet completions
+    use { "hrsh7th/nvim-cmp" }          -- The completion plugin
+    use { "hrsh7th/cmp-buffer" }        -- buffer completions
+    use { "hrsh7th/cmp-path" }          -- path completions
+    use { "saadparwaiz1/cmp_luasnip" }  -- snippet completions
     use { "hrsh7th/cmp-nvim-lsp" }
     use { "hrsh7th/cmp-nvim-lua" }
 
     -- Snippets
-    use { "L3MON4D3/LuaSnip" } --snippet engine
-    use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
+    use { "L3MON4D3/LuaSnip" }              --snippet engine
+    use { "rafamadriz/friendly-snippets" }  -- a bunch of snippets to use
 
     -- LSP
-    use { "neovim/nvim-lspconfig" } -- enable LSP
-    use { "williamboman/mason.nvim" } -- simple to use language server installer
+    use { "neovim/nvim-lspconfig" }             -- enable LSP
+    use { "williamboman/mason.nvim" }           -- simple to use language server installer
     use { "williamboman/mason-lspconfig.nvim" }
-    use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
+    use { "jose-elias-alvarez/null-ls.nvim" }   -- for formatters and linters
 
     -- Telescope
     use { "nvim-telescope/telescope.nvim" }
@@ -82,6 +82,17 @@ return packer.startup(function(use)
 
     -- Enable smooth scrolling 
     use { "karb94/neoscroll.nvim" }
+    
+    -- Edit surrounding quotes and brackets with ease
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({
+                require "user.nvim-surround",
+            })
+        end
+    })
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
