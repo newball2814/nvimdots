@@ -49,6 +49,7 @@ return packer.startup(function(use)
 
     -- Colorschemes
     use { "bluz71/vim-moonfly-colors" }
+    use { "sainnhe/everforest" }
 
     -- Cmp 
     use { "hrsh7th/nvim-cmp" }          -- The completion plugin
