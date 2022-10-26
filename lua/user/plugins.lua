@@ -46,10 +46,20 @@ return packer.startup(function(use)
     use { "kyazdani42/nvim-web-devicons" }
     use { "kyazdani42/nvim-tree.lua" }
     use { "nvim-lualine/lualine.nvim" }
+    use { "lewis6991/impatient.nvim" }
 
     -- Colorschemes
-    use { "bluz71/vim-moonfly-colors" }
+    -- use { "bluz71/vim-moonfly-colors" }
     use { "sainnhe/everforest" }
+    use { "RRethy/nvim-base16" }
+
+    -- Quick comment 
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 
     -- Cmp 
     use { "hrsh7th/nvim-cmp" }          -- The completion plugin
@@ -57,7 +67,7 @@ return packer.startup(function(use)
     use { "hrsh7th/cmp-path" }          -- path completions
     use { "saadparwaiz1/cmp_luasnip" }  -- snippet completions
     use { "hrsh7th/cmp-nvim-lsp" }
-    use { "hrsh7th/cmp-nvim-lua" }
+    -- use { "hrsh7th/cmp-nvim-lua" }
 
     -- Snippets
     use { "L3MON4D3/LuaSnip" }              --snippet engine
