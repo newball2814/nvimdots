@@ -79,8 +79,12 @@ return packer.startup(function(use)
     use { "williamboman/mason-lspconfig.nvim" }
     use { "jose-elias-alvarez/null-ls.nvim" }   -- for formatters and linters
 
+    -- Cool dashboard
+    use { "glepnir/dashboard-nvim" }
+
     -- Telescope
     use { "nvim-telescope/telescope.nvim" }
+    use { "nvim-telescope/telescope-media-files.nvim" }
 
     -- Treesitter
     use {

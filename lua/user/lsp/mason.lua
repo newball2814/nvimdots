@@ -1,7 +1,9 @@
 local servers = {
     "sumneko_lua",
     "clangd",
-    "perlnavigator",
+    "marksman",
+    "html",
+    "cssls"
     -- "pyright",
 }
 
