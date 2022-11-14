@@ -73,6 +73,19 @@ return packer.startup(function(use)
     use { "L3MON4D3/LuaSnip" }              --snippet engine
     use { "rafamadriz/friendly-snippets" }  -- a bunch of snippets to use
 
+    -- Autoclosing tags for html
+    use { 
+        "windwp/nvim-ts-autotag",
+        config = function()
+            require'nvim-treesitter.configs'.setup {
+                autotag = {
+                    enable = true,
+                    filetypes = { "html" },
+                }
+            }
+        end
+    }
+
     -- LSP
     use { "neovim/nvim-lspconfig" }             -- enable LSP
     use { "williamboman/mason.nvim" }           -- simple to use language server installer
