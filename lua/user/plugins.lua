@@ -74,7 +74,7 @@ return packer.startup(function(use)
     use { "rafamadriz/friendly-snippets" }  -- a bunch of snippets to use
 
     -- Autoclosing tags for html
-    use { 
+    use {
         "windwp/nvim-ts-autotag",
         config = function()
             require'nvim-treesitter.configs'.setup {
@@ -101,13 +101,16 @@ return packer.startup(function(use)
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
     }
-    
+
     -- Colorizer
     use { "norcalli/nvim-colorizer.lua" }
 
     -- Enable smooth scrolling 
     use { "karb94/neoscroll.nvim" }
-    
+
+    -- Easy indent
+    use { "lukas-reineke/indent-blankline.nvim" }
+
     -- Edit surrounding quotes and brackets with ease
     use({
         "kylechui/nvim-surround",
@@ -119,8 +122,23 @@ return packer.startup(function(use)
         end
     })
 
+    -- ZenMode bcs why not :) 
+    use {
+        "folke/zen-mode.nvim",
+        config = function()
+            require("zen-mode").setup {
+                window = {
+                    backdrop = 0.96,
+                    options = {
+                        number = false,
+                        relativenumber = false,
+                    }
+                },
+            }
+        end
+    }
+
     -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end

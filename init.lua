@@ -22,3 +22,4 @@ require "user.autopairs"            -- auto-closing brackets
 require "user.neoscroll"            -- smooth scrolling
 require "user.nvim-tree"            -- show directories
 require "user.lualine"              -- display status 
+require "user.indentline"           -- easier to look at indentations

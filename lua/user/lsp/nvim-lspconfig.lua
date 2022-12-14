@@ -52,3 +52,11 @@ require('lspconfig')['sumneko_lua'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
+require('lspconfig')['pyright'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['marksman'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
