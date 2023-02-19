@@ -217,6 +217,11 @@ _G.packer_plugins = {
     path = "/home/plebb/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-eunuch"] = {
+    loaded = true,
+    path = "/home/plebb/.local/share/nvim/site/pack/packer/start/vim-eunuch",
+    url = "https://github.com/tpope/vim-eunuch"
+  },
   vimtex = {
     loaded = true,
     path = "/home/plebb/.local/share/nvim/site/pack/packer/start/vimtex",

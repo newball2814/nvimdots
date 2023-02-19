@@ -61,6 +61,9 @@ return packer.startup(function(use)
         end
     }
 
+    -- Cool 
+    use { "tpope/vim-eunuch" }
+
     -- Cmp 
     use { "hrsh7th/nvim-cmp" }          -- The completion plugin
     use { "hrsh7th/cmp-buffer" }        -- buffer completions
