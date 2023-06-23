@@ -44,9 +44,8 @@ return packer.startup(function(use)
     use { "nvim-lua/plenary.nvim" }         -- Useful lua functions used by lots of plugins
     use { "windwp/nvim-autopairs" }         -- Autopairs, integrates with both cmp and treesitter
     use { "kyazdani42/nvim-web-devicons" }
-    use { "kyazdani42/nvim-tree.lua" }
+    -- use { "kyazdani42/nvim-tree.lua" }
     use { "nvim-lualine/lualine.nvim" }
-    use { "lewis6991/impatient.nvim" }
 
     -- Colorschemes
     -- use { "bluz71/vim-moonfly-colors" }
@@ -71,9 +70,6 @@ return packer.startup(function(use)
     use { "saadparwaiz1/cmp_luasnip" }  -- snippet completions
     use { "hrsh7th/cmp-nvim-lsp" }
     -- use { "hrsh7th/cmp-nvim-lua" }
-
-    -- LaTeX support 
-    use { "lervag/vimtex" }
 
     -- Snippets
     use { "L3MON4D3/LuaSnip" }              --snippet engine
