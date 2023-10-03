@@ -51,6 +51,7 @@ return packer.startup(function(use)
     -- use { "bluz71/vim-moonfly-colors" }
     use { "sainnhe/everforest" }
     use { "RRethy/nvim-base16" }
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     -- Quick comment 
     use {
@@ -59,6 +60,9 @@ return packer.startup(function(use)
             require('Comment').setup()
         end
     }
+
+    -- Cursed
+    use { "tjdevries/sPoNGe-BoB.NvIm" }
 
     -- Cool 
     use { "tpope/vim-eunuch" }

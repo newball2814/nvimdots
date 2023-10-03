@@ -12,6 +12,14 @@ telescope.setup {
         selection_caret = "  ",
         path_display = { "smart" },
 
+        layout_config = {
+            vertical = { width = 0.7 }
+        },
+
+        preview = {                                                                                                                                                                          
+            hide_on_startup = true -- hide previewer when picker starts
+        },
+
         mappings = {
             i = {
                 ["<C-n>"] = actions.cycle_history_next,
@@ -87,9 +95,10 @@ telescope.setup {
         -- builtin picker
         find_files = {
             theme = "dropdown",
-        }
+        },
     },
     extensions = {
+        -- Extensions go here
     },
 }
 

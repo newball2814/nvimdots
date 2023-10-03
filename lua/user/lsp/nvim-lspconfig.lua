@@ -51,16 +51,24 @@ require('lspconfig')['cssls'].setup{
 require('lspconfig')['pyright'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
+    settings = {
+      python = {
+          analysis = {
+            autoSearchPaths = true,
+            diagnosticMode = 'workspace',
+            useLibraryCodeForTypes = true,
+            extraPaths = {
+                '/home/plebb/.local/lib/python3.11/site-packages'
+            }
+          }
+      }
+    },
 }
 require('lspconfig')['marksman'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
-require('lspconfig')['tsserver'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
-require('lspconfig')['texlab'].setup{
+require('lspconfig')['rust_analyzer'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }

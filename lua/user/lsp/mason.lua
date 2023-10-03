@@ -2,8 +2,8 @@ local servers = {
     "clangd",
     "marksman",
     "html",
-    "cssls",
     "pyright",
+    "rust_analyzer",
 }
 
 local settings = {
